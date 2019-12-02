@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 4d6a902..52e931f 100644
+index 4d6a902..5e8b53a 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -4,7 +4,7 @@ project(python_h264decoder)
@@ -11,3 +11,12 @@ index 4d6a902..52e931f 100644
  
  include_directories(${PYTHON_INCLUDE_DIRS})
  include_directories(${Boost_INCLUDE_DIRS})
+@@ -16,7 +16,7 @@ add_executable(h264decoder_test1 h264decoder.cpp h264decoder_test1.cpp)
+ target_link_libraries(h264decoder_test1 avcodec swscale avutil)
+ 
+ add_library(h264decoder SHARED h264decoder.cpp h264decoder_python.cpp)
+-target_link_libraries(h264decoder avcodec swscale avutil ${Boost_PYTHON_LIBRARY_RELEASE} ${PYTHON_LIBRARIES})
++target_link_libraries(h264decoder avcodec swscale avutil ${Boost_PYTHON27_LIBRARY_RELEASE} ${PYTHON_LIBRARIES})
+ 
+ 
+ add_custom_command(TARGET h264decoder POST_BUILD
