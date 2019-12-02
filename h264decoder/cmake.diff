@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 4d6a902..52e931f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -4,7 +4,7 @@ project(python_h264decoder)
+ set(Python_ADDITIONAL_VERSIONS 2.7)
+ find_package(PythonInterp 2.7 REQUIRED)
+ find_package(PythonLibs 2.7 REQUIRED )
+-find_package(Boost REQUIRED COMPONENTS "python")
++find_package(Boost REQUIRED COMPONENTS "python27")
+ 
+ include_directories(${PYTHON_INCLUDE_DIRS})
+ include_directories(${Boost_INCLUDE_DIRS})
